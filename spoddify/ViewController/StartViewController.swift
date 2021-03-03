@@ -1,8 +1,8 @@
 //
-//  ViewController.swift
+//  StartViewController.swift
 //  spoddify
 //
-//  Created by 김유진 on 2021/02/18.
+//  Created by 김유진 on 2021/03/03.
 //
 
 import UIKit
@@ -19,7 +19,12 @@ class StartViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+           return .lightContent
+       }
 
-
+    @IBAction func signUpButton(_ sender: Any) {
+        currentView = "email"
+    }
 }
-
