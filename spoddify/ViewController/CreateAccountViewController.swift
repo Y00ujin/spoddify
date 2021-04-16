@@ -68,6 +68,7 @@ class CreateAccountViewController: UIViewController, UITextFieldDelegate{
         emailTextField.delegate = self
         passwardTextField.delegate = self
         birthTextField.delegate = self
+        
         passwardTextField.isSecureTextEntry = true
         
         let eyeImage = UIImage(systemName: "eye.slash")
