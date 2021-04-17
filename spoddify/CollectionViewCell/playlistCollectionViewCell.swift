@@ -15,7 +15,7 @@ class playlistCollectionViewCell: UICollectionViewCell{
         super.awakeFromNib()
         
         playlistBackgroundView.layer.cornerRadius = 5
-//        playlistImage.layer.cornerRadius = 5
-//        playlistImage.layer.masksToBounds = true
+        playlistImage.layer.cornerRadius = 5
+        playlistImage.layer.masksToBounds = true
     }
 }
