@@ -18,13 +18,14 @@ class LogInViewController: UIViewController, UITextFieldDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         emailorUserName.delegate = self
         passwardTF.delegate = self
         
         loginButton.layer.cornerRadius = 25
         
         loginWithoutPasswardButton.layer.cornerRadius = 15
-        loginWithoutPasswardButton.layer.borderWidth = 2
+        loginWithoutPasswardButton.layer.borderWidth = 1
         loginWithoutPasswardButton.layer.borderColor = UIColor.darkGray.cgColor
     }
     
@@ -42,5 +43,9 @@ class LogInViewController: UIViewController, UITextFieldDelegate{
         }else if textField == emailorUserName{
             emailOrUserNameTFBg.backgroundColor = UIColor(red: 113/255, green: 113/255, blue: 113/255, alpha: 1)
         }
+    }
+    
+    @IBAction func backButton(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
     }
 }
