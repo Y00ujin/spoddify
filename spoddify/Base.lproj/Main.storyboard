@@ -3,8 +3,10 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -385,6 +387,7 @@
                                         </state>
                                         <connections>
                                             <action selector="nextButton:" destination="aA8-eS-ufe" eventType="touchUpInside" id="zRL-cz-nC9"/>
+                                            <segue destination="f85-dn-1us" kind="push" id="b5Y-YD-65t"/>
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xFg-M8-mi6" customClass="AgreementViewDesign" customModule="spoddify" customModuleProvider="target">
@@ -562,6 +565,125 @@
             </objects>
             <point key="canvasLocation" x="2555.072463768116" y="148.66071428571428"/>
         </scene>
+        <!--Item-->
+        <scene sceneID="JpV-dc-90l">
+            <objects>
+                <viewController id="9rE-hf-FrH" customClass="HomeViewController" customModule="spoddify" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="K59-5q-cKd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="436-LG-fXd">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uiP-Qp-RGu">
+                                        <rect key="frame" x="0.0" y="-44" width="414" height="1500"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="즐거운 오후입니다" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L7N-pR-Eq1">
+                                                <rect key="frame" x="16" y="102" width="186" height="32"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9XS-xp-NXy">
+                                                <rect key="frame" x="372" y="108" width="21" height="20"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" image="gearshape" catalog="system"/>
+                                            </button>
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gIz-Bd-JQp">
+                                                <rect key="frame" x="16" y="152" width="377" height="214"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="1Ae-Ox-Jtw">
+                                                    <size key="itemSize" width="187" height="55"/>
+                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                </collectionViewFlowLayout>
+                                                <cells>
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="playlistCollectionViewCell" reuseIdentifier="playlistCollectionViewCell" id="KoY-zf-IV6" customClass="playlistCollectionViewCell" customModule="spoddify" customModuleProvider="target">
+                                                        <rect key="frame" x="95" y="0.0" width="187" height="55"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="AXr-8J-ojO">
+                                                            <rect key="frame" x="0.0" y="0.0" width="187" height="55"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <subviews>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wok-Hf-Qc1">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="187" height="55"/>
+                                                                    <subviews>
+                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ariana Grande" translatesAutoresizingMaskIntoConstraints="NO" id="aAv-aQ-2X0">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="55" height="55"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" constant="55" id="1B5-E5-KOr"/>
+                                                                                <constraint firstAttribute="height" constant="55" id="7Lj-xC-bPV"/>
+                                                                            </constraints>
+                                                                        </imageView>
+                                                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" text="This is Ariana Grande" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RRo-sY-dFN">
+                                                                            <rect key="frame" x="63" y="4" width="103" height="46"/>
+                                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="height" constant="46" id="U92-87-1s0"/>
+                                                                                <constraint firstAttribute="width" constant="103" id="hbG-US-7bw"/>
+                                                                            </constraints>
+                                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                                        </textView>
+                                                                    </subviews>
+                                                                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <constraints>
+                                                                        <constraint firstItem="RRo-sY-dFN" firstAttribute="top" secondItem="Wok-Hf-Qc1" secondAttribute="top" constant="4" id="3vE-5G-vEo"/>
+                                                                        <constraint firstAttribute="height" constant="62" id="6UY-JX-Yhp"/>
+                                                                        <constraint firstAttribute="width" constant="177" id="DaT-Sh-F9s"/>
+                                                                        <constraint firstItem="aAv-aQ-2X0" firstAttribute="top" secondItem="Wok-Hf-Qc1" secondAttribute="top" id="S8W-G7-96N"/>
+                                                                        <constraint firstItem="aAv-aQ-2X0" firstAttribute="leading" secondItem="Wok-Hf-Qc1" secondAttribute="leading" id="owv-Y1-yZe"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="RRo-sY-dFN" secondAttribute="trailing" constant="21" id="zpJ-cg-5uD"/>
+                                                                    </constraints>
+                                                                </view>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstItem="Wok-Hf-Qc1" firstAttribute="top" secondItem="AXr-8J-ojO" secondAttribute="top" id="2cT-f7-Uih"/>
+                                                                <constraint firstAttribute="bottom" secondItem="Wok-Hf-Qc1" secondAttribute="bottom" id="5o1-Yt-RB8"/>
+                                                                <constraint firstItem="Wok-Hf-Qc1" firstAttribute="leading" secondItem="AXr-8J-ojO" secondAttribute="leading" id="IKQ-nY-GhK"/>
+                                                                <constraint firstAttribute="trailing" secondItem="Wok-Hf-Qc1" secondAttribute="trailing" id="f1T-Nk-nrE"/>
+                                                            </constraints>
+                                                        </collectionViewCellContentView>
+                                                        <size key="customSize" width="187" height="55"/>
+                                                        <connections>
+                                                            <outlet property="playlistBackgroundView" destination="Wok-Hf-Qc1" id="ASX-7v-ohU"/>
+                                                            <outlet property="playlistImage" destination="aAv-aQ-2X0" id="Xkg-us-G4o"/>
+                                                            <outlet property="playlistTitleLabel" destination="RRo-sY-dFN" id="rBr-dc-P5S"/>
+                                                        </connections>
+                                                    </collectionViewCell>
+                                                </cells>
+                                            </collectionView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.090197004380000001" green="0.090194411579999995" blue="0.090196155010000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </view>
+                                </subviews>
+                                <viewLayoutGuide key="contentLayoutGuide" id="IhR-by-VSe"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="IfQ-6A-x9I"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="T5P-c1-92q"/>
+                        <color key="backgroundColor" red="0.090197004380000001" green="0.090194411579999995" blue="0.090196155010000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="AUg-qL-QfS">
+                        <color key="badgeColor" name="AccentColor"/>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="playlistCollectionView" destination="gIz-Bd-JQp" id="076-d3-t44"/>
+                        <outlet property="settingButton" destination="9XS-xp-NXy" id="Bq7-BY-3nP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j8S-4u-KHf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4169.5652173913049" y="148.66071428571428"/>
+        </scene>
         <!--Log In View Controller-->
         <scene sceneID="qGR-H1-WaR">
             <objects>
@@ -652,6 +774,9 @@
                                 <state key="normal" title="로그인하기">
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
+                                <connections>
+                                    <segue destination="f85-dn-1us" kind="push" id="zj8-qF-eeK"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wrf-z2-AvP">
                                 <rect key="frame" x="116" y="443" width="182" height="30"/>
@@ -719,6 +844,9 @@
                                 <state key="normal" title="로그인하기">
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
+                                <connections>
+                                    <segue destination="f85-dn-1us" kind="push" id="c77-ye-QAc"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XLN-Qr-Vlb" customClass="TextfieldViewDesign" customModule="spoddify" customModuleProvider="target">
                                 <rect key="frame" x="20" y="133" width="374" height="50"/>
@@ -782,16 +910,43 @@
             </objects>
             <point key="canvasLocation" x="818.84057971014499" y="148.66071428571428"/>
         </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="3D6-2t-Opn">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="f85-dn-1us" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="gbV-TZ-Yv0"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dLe-tY-RRz">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="9rE-hf-FrH" kind="relationship" relationship="viewControllers" id="msh-0Q-hSM"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mlm-xz-ST4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3371" y="149"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="c77-ye-QAc"/>
+    </inferredMetricsTieBreakers>
     <resources>
+        <image name="Ariana Grande" width="434" height="436"/>
         <image name="apple_icon" width="3346" height="4104"/>
         <image name="checkmark" catalog="system" width="128" height="114"/>
         <image name="chevron.backward" catalog="system" width="96" height="128"/>
         <image name="chevron.left" catalog="system" width="96" height="128"/>
         <image name="eye.slash" catalog="system" width="128" height="86"/>
         <image name="facebook_icon" width="512" height="512"/>
+        <image name="gearshape" catalog="system" width="128" height="121"/>
         <image name="google_icon" width="1125" height="1125"/>
         <image name="spoddify_icon" width="256" height="256"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
