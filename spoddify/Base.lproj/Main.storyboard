@@ -617,16 +617,16 @@
                                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ariana Grande" translatesAutoresizingMaskIntoConstraints="NO" id="9fj-Vb-h8u">
                                                                             <rect key="frame" x="0.0" y="0.0" width="55" height="55"/>
                                                                             <constraints>
-                                                                                <constraint firstAttribute="width" relation="lessThanOrEqual" constant="55" id="34G-yj-QiK"/>
-                                                                                <constraint firstAttribute="height" relation="lessThanOrEqual" constant="55" id="EWc-aG-BFa"/>
+                                                                                <constraint firstAttribute="height" constant="55" id="C4l-FC-Txn"/>
+                                                                                <constraint firstAttribute="width" constant="55" id="DHq-Ax-kPe"/>
                                                                             </constraints>
                                                                         </imageView>
                                                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="This is Ariana Grande" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fNX-gn-Wif">
-                                                                            <rect key="frame" x="63" y="4" width="108" height="46"/>
+                                                                            <rect key="frame" x="63" y="4.5" width="108" height="46"/>
                                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                             <constraints>
-                                                                                <constraint firstAttribute="width" constant="108" id="Bsm-DC-oeC"/>
-                                                                                <constraint firstAttribute="height" constant="46" id="iHP-Nm-4hq"/>
+                                                                                <constraint firstAttribute="height" constant="46" id="EZ8-0K-xhV"/>
+                                                                                <constraint firstAttribute="width" constant="108" id="M8C-GO-Wbb"/>
                                                                             </constraints>
                                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
@@ -636,15 +636,11 @@
                                                                     <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" relation="lessThanOrEqual" constant="162" id="3i3-Cn-pg5"/>
-                                                                        <constraint firstAttribute="bottom" secondItem="9fj-Vb-h8u" secondAttribute="bottom" id="9q5-yW-guy"/>
-                                                                        <constraint firstItem="9fj-Vb-h8u" firstAttribute="top" secondItem="bxP-4p-NhK" secondAttribute="top" id="CMd-pV-YAa"/>
-                                                                        <constraint firstItem="fNX-gn-Wif" firstAttribute="leading" secondItem="9fj-Vb-h8u" secondAttribute="trailing" constant="8" id="OPQ-i0-i4t"/>
-                                                                        <constraint firstItem="9fj-Vb-h8u" firstAttribute="top" secondItem="bxP-4p-NhK" secondAttribute="top" id="Pgr-CC-uEN"/>
-                                                                        <constraint firstItem="fNX-gn-Wif" firstAttribute="top" secondItem="bxP-4p-NhK" secondAttribute="top" constant="4" id="QE9-tN-4oH"/>
+                                                                        <constraint firstItem="fNX-gn-Wif" firstAttribute="centerY" secondItem="bxP-4p-NhK" secondAttribute="centerY" id="7Lr-Je-7uZ"/>
+                                                                        <constraint firstItem="9fj-Vb-h8u" firstAttribute="centerY" secondItem="bxP-4p-NhK" secondAttribute="centerY" id="NPz-5I-HCH"/>
                                                                         <constraint firstAttribute="height" constant="55" id="Req-za-BG6"/>
-                                                                        <constraint firstItem="fNX-gn-Wif" firstAttribute="top" secondItem="bxP-4p-NhK" secondAttribute="top" constant="4" id="czI-2u-SsW"/>
-                                                                        <constraint firstItem="9fj-Vb-h8u" firstAttribute="leading" secondItem="bxP-4p-NhK" secondAttribute="leading" id="mUK-Fj-UC9"/>
-                                                                        <constraint firstItem="9fj-Vb-h8u" firstAttribute="leading" secondItem="bxP-4p-NhK" secondAttribute="leading" id="r52-HC-4p6"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="fNX-gn-Wif" secondAttribute="trailing" constant="12" id="Vd1-Ka-FEw"/>
+                                                                        <constraint firstItem="9fj-Vb-h8u" firstAttribute="leading" secondItem="bxP-4p-NhK" secondAttribute="leading" id="yQn-N1-Lfj"/>
                                                                     </constraints>
                                                                 </view>
                                                             </subviews>
