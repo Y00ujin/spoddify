@@ -578,10 +578,10 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uiP-Qp-RGu">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1500"/>
+                                        <rect key="frame" x="0.0" y="-44" width="414" height="1500"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="즐거운 오후입니다" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L7N-pR-Eq1">
-                                                <rect key="frame" x="16" y="102" width="186" height="32"/>
+                                                <rect key="frame" x="16" y="96" width="186" height="32"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -593,8 +593,67 @@
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" image="gearshape" catalog="system"/>
                                             </button>
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="lBg-VO-dFE">
+                                                <rect key="frame" x="19" y="414" width="414" height="217"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="c1v-Xj-NAB">
+                                                    <size key="itemSize" width="171" height="207"/>
+                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                </collectionViewFlowLayout>
+                                                <cells>
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="playlistRecentlyPlayedCollectionViewCell" id="a9W-ye-f1z" customClass="playlistRecentlyPlayedCollectionViewCell" customModule="spoddify" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="171" height="207"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="z8q-uF-mxK">
+                                                            <rect key="frame" x="0.0" y="0.0" width="171" height="207"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <subviews>
+                                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="This is Ariana Grande" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="NP6-VN-EKa">
+                                                                    <rect key="frame" x="10.5" y="151" width="97" height="48"/>
+                                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="48" id="ieQ-nE-tUR"/>
+                                                                        <constraint firstAttribute="width" constant="97" id="oFs-II-npd"/>
+                                                                    </constraints>
+                                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                                </textView>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ariana Grande" translatesAutoresizingMaskIntoConstraints="NO" id="k9F-Nc-oFo">
+                                                                    <rect key="frame" x="10.5" y="0.0" width="150" height="150"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="150" id="8rY-H0-no6"/>
+                                                                        <constraint firstAttribute="width" constant="150" id="V6w-6T-odS"/>
+                                                                    </constraints>
+                                                                </imageView>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstItem="NP6-VN-EKa" firstAttribute="top" secondItem="k9F-Nc-oFo" secondAttribute="bottom" constant="1" id="2Ll-Hu-Vhn"/>
+                                                                <constraint firstItem="k9F-Nc-oFo" firstAttribute="centerX" secondItem="z8q-uF-mxK" secondAttribute="centerX" id="STk-Qt-vZs"/>
+                                                                <constraint firstItem="k9F-Nc-oFo" firstAttribute="top" secondItem="z8q-uF-mxK" secondAttribute="top" id="m29-E0-FdQ"/>
+                                                                <constraint firstItem="NP6-VN-EKa" firstAttribute="leading" secondItem="k9F-Nc-oFo" secondAttribute="leading" id="ygu-Ch-I0z"/>
+                                                            </constraints>
+                                                        </collectionViewCellContentView>
+                                                        <size key="customSize" width="171" height="207"/>
+                                                        <connections>
+                                                            <outlet property="playlistImage" destination="k9F-Nc-oFo" id="26f-iS-ppv"/>
+                                                            <outlet property="playlistName" destination="NP6-VN-EKa" id="lSB-pR-XMh"/>
+                                                        </connections>
+                                                    </collectionViewCell>
+                                                </cells>
+                                            </collectionView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="최근 재생한 항목" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YdH-gd-R2z">
+                                                <rect key="frame" x="16" y="363" width="169" height="32"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gIz-Bd-JQp">
-                                                <rect key="frame" x="0.0" y="142" width="414" height="193"/>
+                                                <rect key="frame" x="19" y="142" width="377" height="193"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="1Ae-Ox-Jtw">
@@ -622,11 +681,11 @@
                                                                             </constraints>
                                                                         </imageView>
                                                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="This is Ariana Grande" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fNX-gn-Wif">
-                                                                            <rect key="frame" x="63" y="4.5" width="108" height="46"/>
+                                                                            <rect key="frame" x="61" y="4.5" width="116" height="46"/>
                                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                             <constraints>
-                                                                                <constraint firstAttribute="height" constant="46" id="EZ8-0K-xhV"/>
-                                                                                <constraint firstAttribute="width" constant="108" id="M8C-GO-Wbb"/>
+                                                                                <constraint firstAttribute="width" constant="116" id="CEh-kc-ibg"/>
+                                                                                <constraint firstAttribute="height" constant="46" id="QSS-P8-BIf"/>
                                                                             </constraints>
                                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
@@ -636,10 +695,10 @@
                                                                     <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" relation="lessThanOrEqual" constant="162" id="3i3-Cn-pg5"/>
-                                                                        <constraint firstItem="fNX-gn-Wif" firstAttribute="centerY" secondItem="bxP-4p-NhK" secondAttribute="centerY" id="7Lr-Je-7uZ"/>
+                                                                        <constraint firstItem="fNX-gn-Wif" firstAttribute="centerY" secondItem="bxP-4p-NhK" secondAttribute="centerY" id="6n5-jV-Xcv"/>
                                                                         <constraint firstItem="9fj-Vb-h8u" firstAttribute="centerY" secondItem="bxP-4p-NhK" secondAttribute="centerY" id="NPz-5I-HCH"/>
                                                                         <constraint firstAttribute="height" constant="55" id="Req-za-BG6"/>
-                                                                        <constraint firstAttribute="trailing" secondItem="fNX-gn-Wif" secondAttribute="trailing" constant="12" id="Vd1-Ka-FEw"/>
+                                                                        <constraint firstItem="fNX-gn-Wif" firstAttribute="leading" secondItem="9fj-Vb-h8u" secondAttribute="trailing" constant="6" id="u2J-lK-nkd"/>
                                                                         <constraint firstItem="9fj-Vb-h8u" firstAttribute="leading" secondItem="bxP-4p-NhK" secondAttribute="leading" id="yQn-N1-Lfj"/>
                                                                     </constraints>
                                                                 </view>
@@ -653,20 +712,13 @@
                                                         </collectionViewCellContentView>
                                                         <size key="customSize" width="183" height="55"/>
                                                         <connections>
-                                                            <outlet property="playlistBackgroundView" destination="bxP-4p-NhK" id="zCi-mH-onx"/>
+                                                            <outlet property="playlistBackgroundView" destination="bxP-4p-NhK" id="t3X-Tn-hTP"/>
                                                             <outlet property="playlistImage" destination="9fj-Vb-h8u" id="FHB-kJ-F8z"/>
                                                             <outlet property="playlistTitleLabel" destination="fNX-gn-Wif" id="uAH-jJ-XlX"/>
                                                         </connections>
                                                     </collectionViewCell>
                                                 </cells>
                                             </collectionView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="즐거운 오후입니다" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YdH-gd-R2z">
-                                                <rect key="frame" x="16" y="343" width="186" height="32"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" red="0.090197004380000001" green="0.090194411579999995" blue="0.090196155010000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
@@ -679,7 +731,7 @@
                                     <constraint firstItem="uiP-Qp-RGu" firstAttribute="trailing" secondItem="IhR-by-VSe" secondAttribute="trailing" id="48s-Ca-AWD"/>
                                     <constraint firstItem="uiP-Qp-RGu" firstAttribute="leading" secondItem="IhR-by-VSe" secondAttribute="leading" id="HeL-Gz-7a6"/>
                                     <constraint firstItem="uiP-Qp-RGu" firstAttribute="width" secondItem="IfQ-6A-x9I" secondAttribute="width" id="RQ6-LJ-rzq"/>
-                                    <constraint firstItem="IhR-by-VSe" firstAttribute="top" secondItem="uiP-Qp-RGu" secondAttribute="top" id="ZDy-rd-zMr"/>
+                                    <constraint firstItem="IhR-by-VSe" firstAttribute="top" secondItem="uiP-Qp-RGu" secondAttribute="top" constant="44" id="ZDy-rd-zMr"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="IhR-by-VSe"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="IfQ-6A-x9I"/>
@@ -693,6 +745,7 @@
                     </tabBarItem>
                     <connections>
                         <outlet property="playlistCollectionView" destination="gIz-Bd-JQp" id="076-d3-t44"/>
+                        <outlet property="playlistRecentlyPlayedCollectionView" destination="lBg-VO-dFE" id="6C4-sS-aJv"/>
                         <outlet property="settingButton" destination="9XS-xp-NXy" id="Bq7-BY-3nP"/>
                     </connections>
                 </viewController>
