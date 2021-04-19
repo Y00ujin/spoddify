@@ -565,7 +565,7 @@
             </objects>
             <point key="canvasLocation" x="2555.072463768116" y="148.66071428571428"/>
         </scene>
-        <!--Item-->
+        <!--Home-->
         <scene sceneID="JpV-dc-90l">
             <objects>
                 <viewController id="9rE-hf-FrH" customClass="HomeViewController" customModule="spoddify" customModuleProvider="target" sceneMemberID="viewController">
@@ -740,7 +740,7 @@
                         <viewLayoutGuide key="safeArea" id="T5P-c1-92q"/>
                         <color key="backgroundColor" red="0.090197004380000001" green="0.090194411579999995" blue="0.090196155010000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="AUg-qL-QfS">
+                    <tabBarItem key="tabBarItem" title="Home" image="music.note.house.fill" catalog="system" id="AUg-qL-QfS">
                         <color key="badgeColor" name="AccentColor"/>
                     </tabBarItem>
                     <connections>
@@ -752,6 +752,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j8S-4u-KHf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4169.5652173913049" y="148.66071428571428"/>
+        </scene>
+        <!--Search-->
+        <scene sceneID="oJF-kK-3MV">
+            <objects>
+                <viewController id="Ox9-Tl-Tbo" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="blc-k4-637">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="fyw-ea-hfj"/>
+                        <color key="backgroundColor" red="0.090197004380000001" green="0.090194411579999995" blue="0.090196155010000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Search" image="magnifyingglass" catalog="system" id="9iR-OB-T6X"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zRj-iL-zJ3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4170" y="822"/>
         </scene>
         <!--Log In View Controller-->
         <scene sceneID="qGR-H1-WaR">
@@ -989,9 +1005,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.094945814570123896" green="0.094487139137417978" blue="0.0954044900028298" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="9rE-hf-FrH" kind="relationship" relationship="viewControllers" id="msh-0Q-hSM"/>
+                        <segue destination="Ox9-Tl-Tbo" kind="relationship" relationship="viewControllers" id="ntZ-dg-f8P"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mlm-xz-ST4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1012,6 +1031,8 @@
         <image name="facebook_icon" width="512" height="512"/>
         <image name="gearshape" catalog="system" width="128" height="121"/>
         <image name="google_icon" width="1125" height="1125"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="music.note.house.fill" catalog="system" width="128" height="106"/>
         <image name="spoddify_icon" width="256" height="256"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
