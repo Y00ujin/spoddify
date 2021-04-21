@@ -165,6 +165,7 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="tintColor" red="0.3411764706" green="0.71372549019999998" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits" spellCheckingType="no" keyboardType="emailAddress" keyboardAppearance="alert" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="password"/>
                                             </textField>
@@ -183,14 +184,6 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="나중에 이 이메일 주소를 확인해야 합니다." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="rLl-yY-Sqc">
-                                        <rect key="frame" x="11" y="91" width="265" height="51"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <color key="textColor" red="0.94303051069999999" green="0.93847480780000003" blue="0.94758621369999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
@@ -207,6 +200,7 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="tintColor" red="0.3411764706" green="0.71372549019999998" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits" spellCheckingType="no" keyboardType="emailAddress" keyboardAppearance="alert" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="password"/>
                                             </textField>
@@ -250,7 +244,7 @@
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="tintColor" red="0.3411764705882353" green="0.71372549019607845" blue="0.37254901960784315" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <textInputTraits key="textInputTraits" spellCheckingType="no" keyboardType="emailAddress" keyboardAppearance="alert" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="password"/>
+                                                <textInputTraits key="textInputTraits" spellCheckingType="no" keyboardType="emailAddress" keyboardAppearance="alert" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="email"/>
                                             </textField>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="checkmark" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="cll-Ua-MaV">
                                                 <rect key="frame" x="327" y="17" width="39" height="18"/>
@@ -527,6 +521,37 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7ul-gY-qpt">
+                                <rect key="frame" x="18" y="606" width="379" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zr8-v3-BAg">
+                                        <rect key="frame" x="23" y="19" width="334" height="41"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.21280554344725941" green="0.21328513009060582" blue="0.22060355754813765" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                        <state key="normal" title="여자">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="womenButton:" destination="aA8-eS-ufe" eventType="touchUpInside" id="xEa-u0-ezL"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e5f-Bi-Ic0">
+                                        <rect key="frame" x="23" y="68" width="334" height="41"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.21280554339999999" green="0.2132851301" blue="0.22060355749999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                        <state key="normal" title="남자">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="menButton:" destination="aA8-eS-ufe" eventType="touchUpInside" id="yKL-3b-UTZ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.090197004380000001" green="0.090194411579999995" blue="0.090196155010000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="y2K-dN-FUZ"/>
                         <color key="backgroundColor" red="0.090197004380000001" green="0.090194411579999995" blue="0.090196155010000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -546,7 +571,9 @@
                         <outlet property="emailView" destination="UeJ-p4-RXw" id="fqq-ag-MN4"/>
                         <outlet property="esentialAgreement" destination="P81-u5-a59" id="UlM-wo-AIB"/>
                         <outlet property="madeAccount" destination="g8Z-By-U6T" id="uz7-X7-fQS"/>
+                        <outlet property="menButton" destination="e5f-Bi-Ic0" id="43m-oo-MBJ"/>
                         <outlet property="nextButton" destination="GqN-m3-lKR" id="zyc-8v-SQG"/>
+                        <outlet property="nicknameTextField" destination="scY-xO-iHH" id="rei-LG-0md"/>
                         <outlet property="nicknameView" destination="9d8-RR-xWP" id="SHQ-IY-79R"/>
                         <outlet property="passwardBackground" destination="ac5-Is-O6M" id="7U4-C9-F1U"/>
                         <outlet property="passwardShowButton" destination="SQj-YD-XYu" id="vvs-4k-9Ob"/>
@@ -555,10 +582,13 @@
                         <outlet property="passwardView" destination="K6q-Vz-FfY" id="Lxf-7g-Pbx"/>
                         <outlet property="personalInfoCollectionAndUseAgreementBg" destination="Irt-Mp-2un" id="x3A-gG-p2O"/>
                         <outlet property="personalInfoCollectionAndUseAgreementButton" destination="GOS-3N-Ycu" id="eln-Lx-jIU"/>
+                        <outlet property="sexSelectionView" destination="7ul-gY-qpt" id="Ccs-72-AOC"/>
+                        <outlet property="sexTextField" destination="h6G-jM-m6j" id="FDJ-sj-THP"/>
                         <outlet property="sexView" destination="tBv-h7-wCj" id="94Q-OF-2ZS"/>
                         <outlet property="spoddifyUseAgreementBg" destination="xFg-M8-mi6" id="Tbr-mM-ILH"/>
                         <outlet property="spoddifyUseAgreementButton" destination="Xyz-cK-dCE" id="Dwk-zv-6Ry"/>
                         <outlet property="textFieldBackground" destination="Lha-0d-F2N" id="y7M-a8-QnI"/>
+                        <outlet property="womenButton" destination="zr8-v3-BAg" id="Dsd-Al-dQw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QhF-qH-6aj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -768,7 +798,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AvM-gs-GK5">
-                                        <rect key="frame" x="0.0" y="-44" width="414" height="1500"/>
+                                        <rect key="frame" x="0.0" y="-44" width="414" height="1000"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xIk-Ul-RNn">
                                                 <rect key="frame" x="0.0" y="126" width="414" height="89"/>
@@ -802,7 +832,7 @@
                                                 <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </imageView>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aOF-gU-WBT">
-                                                <rect key="frame" x="1" y="241" width="413" height="749"/>
+                                                <rect key="frame" x="1" y="241" width="413" height="645"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <prototypes>
@@ -813,11 +843,11 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="413" height="61"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="데이터 세이버" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0FC-4G-o4E">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="데이터 세이버" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0FC-4G-o4E">
                                                                     <rect key="frame" x="10" y="20" width="393" height="21"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="height" constant="21" id="3Hc-bl-z7e"/>
-                                                                        <constraint firstAttribute="width" constant="93" id="k58-ZB-EDj"/>
+                                                                        <constraint firstAttribute="height" constant="21" id="g76-KJ-NT4"/>
+                                                                        <constraint firstAttribute="width" constant="393" id="hKS-gc-kCi"/>
                                                                     </constraints>
                                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -835,8 +865,8 @@
                                                             <constraints>
                                                                 <constraint firstItem="lUn-lf-YKH" firstAttribute="trailing" secondItem="G43-2M-RpZ" secondAttribute="trailingMargin" id="QRJ-b8-tX9"/>
                                                                 <constraint firstItem="lUn-lf-YKH" firstAttribute="centerY" secondItem="G43-2M-RpZ" secondAttribute="centerY" id="QfK-eg-PNc"/>
-                                                                <constraint firstItem="0FC-4G-o4E" firstAttribute="centerX" secondItem="G43-2M-RpZ" secondAttribute="centerX" id="RSs-3w-rAH"/>
-                                                                <constraint firstItem="0FC-4G-o4E" firstAttribute="leading" secondItem="G43-2M-RpZ" secondAttribute="leadingMargin" constant="-10" id="wl9-nj-AXF"/>
+                                                                <constraint firstItem="0FC-4G-o4E" firstAttribute="leading" secondItem="G43-2M-RpZ" secondAttribute="leading" constant="10" id="mWD-k4-Kg6"/>
+                                                                <constraint firstItem="0FC-4G-o4E" firstAttribute="centerY" secondItem="G43-2M-RpZ" secondAttribute="centerY" id="oqW-Cp-Ei7"/>
                                                             </constraints>
                                                         </tableViewCellContentView>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -847,10 +877,22 @@
                                                     </tableViewCell>
                                                 </prototypes>
                                             </tableView>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mZX-DH-leM">
+                                                <rect key="frame" x="108" y="910" width="199" height="53"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <state key="normal" title="로그아웃">
+                                                    <color key="titleColor" systemColor="labelColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="logOutButton:" destination="l03-GV-LkJ" eventType="touchUpInside" id="7Ye-JY-X72"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.090197004380000001" green="0.090194411579999995" blue="0.090196155010000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="1500" id="ezL-AC-Vxc"/>
+                                            <constraint firstAttribute="height" constant="1000" id="ezL-AC-Vxc"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -899,6 +941,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="uMF-Rc-2oO"/>
                     <connections>
+                        <outlet property="logoutButton" destination="mZX-DH-leM" id="15n-gO-huj"/>
                         <outlet property="profileButton" destination="xIk-Ul-RNn" id="H8n-Q0-Oey"/>
                         <outlet property="settingTableView" destination="aOF-gU-WBT" id="ko1-4a-Xhe"/>
                         <outlet property="topBarView" destination="78T-Xj-rld" id="ydr-EB-hJf"/>
@@ -907,6 +950,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mnn-bj-xwF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4934.7826086956529" y="148.66071428571428"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Pmi-KN-Rdf">
+            <objects>
+                <viewController id="Y3C-yd-omw" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lPE-Qe-jsm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="g0v-DS-V5X"/>
+                        <color key="backgroundColor" red="0.090197004380000001" green="0.090194411579999995" blue="0.090196155010000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZCJ-wt-Pge" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5703" y="149"/>
         </scene>
         <!--Search-->
         <scene sceneID="oJF-kK-3MV">
@@ -922,7 +980,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zRj-iL-zJ3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4170" y="822"/>
+            <point key="canvasLocation" x="3370" y="856"/>
         </scene>
         <!--Log In View Controller-->
         <scene sceneID="qGR-H1-WaR">
@@ -1061,14 +1119,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="비밀번호 없이 로그인하기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nqw-aM-avp">
-                                <rect key="frame" x="122" y="51" width="170" height="21"/>
+                                <rect key="frame" x="124" y="54" width="170" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xrf-BE-pss">
-                                <rect key="frame" x="20" y="51" width="13" height="22"/>
+                                <rect key="frame" x="22" y="54" width="13" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" image="chevron.backward" catalog="system"/>
@@ -1077,7 +1135,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R1W-ht-hBS">
-                                <rect key="frame" x="124" y="268" width="167" height="49"/>
+                                <rect key="frame" x="126" y="271" width="167" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGray2Color"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -1089,7 +1147,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XLN-Qr-Vlb" customClass="TextfieldViewDesign" customModule="spoddify" customModuleProvider="target">
-                                <rect key="frame" x="20" y="133" width="374" height="50"/>
+                                <rect key="frame" x="22" y="136" width="374" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KF3-7n-KlG">
@@ -1105,14 +1163,14 @@
                                 <color key="backgroundColor" red="0.4431372549" green="0.4431372549" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="이메일 또는 사용자 이름" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FnM-Fd-Wco">
-                                <rect key="frame" x="20" y="93" width="242" height="32"/>
+                                <rect key="frame" x="22" y="96" width="242" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="로그인 링크가 포함된 이메일을 보내드리겠습니다." textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NXw-Q5-6iH">
-                                <rect key="frame" x="15" y="182" width="265" height="51"/>
+                                <rect key="frame" x="17" y="185" width="265" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" red="0.94303051069999999" green="0.93847480780000003" blue="0.94758621369999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -1174,7 +1232,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="c77-ye-QAc"/>
+        <segue reference="b5Y-YD-65t"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Ariana Grande" width="434" height="436"/>

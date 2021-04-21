@@ -9,7 +9,7 @@ import UIKit
 
 var currentView: String = ""
 
-class CreateAccountViewController: UIViewController, UITextFieldDelegate{
+class CreateAccountViewController: UIViewController{
     
     //MARK: Outlet
     @IBOutlet weak var esentialAgreement: UIView!
@@ -20,14 +20,19 @@ class CreateAccountViewController: UIViewController, UITextFieldDelegate{
     @IBOutlet weak var emailView: UIView!
     @IBOutlet weak var nicknameView: UIView!
     @IBOutlet weak var passwardView: UIView!
+    @IBOutlet weak var sexSelectionView: UIView!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwardTextField: UITextField!
     @IBOutlet weak var birthTextField: UITextField!
+    @IBOutlet weak var sexTextField: UITextField!
+    @IBOutlet weak var nicknameTextField: UITextField!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var checkbutton: UIImageView!
     @IBOutlet weak var passwardStateLabel: UILabel!
     @IBOutlet weak var emailStateTextView: UITextView!
     @IBOutlet weak var passwardShowButton: UIButton!
+    @IBOutlet weak var womenButton: UIButton!
+    @IBOutlet weak var menButton: UIButton!
     @IBOutlet weak var birthCheck: UIImageView!
     @IBOutlet weak var birthDatePicker: UIDatePicker!
     @IBOutlet weak var agreementView: UIView!
@@ -48,6 +53,16 @@ class CreateAccountViewController: UIViewController, UITextFieldDelegate{
     //MARK: Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        
+        womenButton.layer.cornerRadius = 10
+        menButton.layer.cornerRadius = 10
+        
+        sexSelectionView.isHidden = true
+        
+        sexTextField.text = "여자"
+        
         madeAccount.layer.cornerRadius = 24
         
         esentialAgreement.layer.cornerRadius = 3
@@ -68,6 +83,8 @@ class CreateAccountViewController: UIViewController, UITextFieldDelegate{
         emailTextField.delegate = self
         passwardTextField.delegate = self
         birthTextField.delegate = self
+        sexTextField.delegate = self
+        nicknameTextField.delegate = self
         
         passwardTextField.isSecureTextEntry = true
         
@@ -83,6 +100,14 @@ class CreateAccountViewController: UIViewController, UITextFieldDelegate{
         
         currentView = "email"
         
+        madeAccount.isEnabled = false
+    }
+    @IBAction func womenButton(_ sender: Any) {
+        sexTextField.text = "여자"
+    }
+    
+    @IBAction func menButton(_ sender: Any) {
+        sexTextField.text = "남자"
     }
     
     //MARK: birthDatePicker
@@ -97,59 +122,12 @@ class CreateAccountViewController: UIViewController, UITextFieldDelegate{
         dateformatter.dateFormat = "YYYY년 M월 d일"
         let date = dateformatter.string(from: birthDatePicker.date)
         birthTextField.text = date
+        nextButton.backgroundColor = UIColor.white
     }
     
     //MARK: Status Bar Style
     override var preferredStatusBarStyle: UIStatusBarStyle {
-           return .lightContent
-    }
-    
-    //MARK: textFieldDidBeginEditing
-    func textFieldDidBeginEditing(_ textField: UITextField){
-        textFieldDidBeginEditing = true
-        
-        print("textFieldDidBeginEditing")
-    }
-    
-    //MARK: textField - shouldChangeCharactersIn
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        if range.location > 0{
-            textFieldBackground.backgroundColor = UIColor(red: 113/255, green: 113/255, blue: 113/255, alpha: 1)
-        }else{
-            textFieldBackground.backgroundColor = UIColor(red: 217/255, green: 217/255, blue: 217/255, alpha: 1)
-        }
-        
-        //MARK: shouldChangeCharactersIn - isValid
-        if textField == emailTextField{
-            // email형식과 다르다면
-            if isValidEmail(testStr: emailTextField.text!) != true {
-                emailTextField.textColor = UIColor(red: 189/255, green: 57/255, blue: 60/255, alpha: 1)
-                textFieldBackground.backgroundColor = UIColor(red: 217/255, green: 217/255, blue: 217/255, alpha: 1)
-                emailStateTextView.text = "이 이메일은 유효하지 않습니다. example@email.com과 같은 형식인지 확인하세요"
-                nextButton.backgroundColor = UIColor(red: 77/255, green: 77/255, blue: 77/255, alpha: 1)
-                checkbutton.isHidden = true
-            }else{ // email형식이 맞다면
-                nextButton.backgroundColor = UIColor.white
-                emailStateTextView.text = "나중에 이 이메일 주소를 확인해야 합니다."
-                checkbutton.isHidden = false
-                emailTextField.textColor = .white
-            }
-        //MARK: shouldChangeCharactersIn - isValidPassward
-        }else if textField == passwardTextField{
-            // passwardTextField형식과 다르다면
-            if isValidPassward(testStr: passwardTextField.text!) != true{
-                passwardBackground.backgroundColor = UIColor(red: 217/255, green: 217/255, blue: 217/255, alpha: 1)
-                passwardTextField.textColor = UIColor(red: 189/255, green: 57/255, blue: 60/255, alpha: 1)
-                nextButton.backgroundColor = UIColor(red: 77/255, green: 77/255, blue: 77/255, alpha: 1)
-            }else{
-                nextButton.backgroundColor = UIColor.white
-                passwardTextField.textColor = .white
-                passwardBackground.backgroundColor = UIColor(red: 113/255, green: 113/255, blue: 113/255, alpha: 1)
-            }
-        }else if textField == birthTextField{
-            nextButton.backgroundColor = UIColor(red: 77/255, green: 77/255, blue: 77/255, alpha: 1)
-        }
-        return true
+           return .darkContent
     }
     
     //MARK: backButton
@@ -184,6 +162,7 @@ class CreateAccountViewController: UIViewController, UITextFieldDelegate{
                 self.sexView.center = CGPoint(x:715, y: 170)
                 self.nextButton.backgroundColor = .white
             }
+            sexSelectionView.isHidden = true
             currentView = "birth"
             print("currentView - \(currentView)")
         }else if currentView == "nickname"{
@@ -194,7 +173,6 @@ class CreateAccountViewController: UIViewController, UITextFieldDelegate{
             }
             currentView = "sex"
             print("currentView - \(currentView)")
-            nextButton.isHidden = false
             agreementView.isHidden = true
         }
     }
@@ -230,15 +208,17 @@ class CreateAccountViewController: UIViewController, UITextFieldDelegate{
                 self.nextButton.backgroundColor = UIColor(red: 77/255, green: 77/255, blue: 77/255, alpha: 1)
             }
             currentView = "sex"
+            sexSelectionView.isHidden = false
+            nextButton.backgroundColor = .white
             print("currentView - \(currentView)")
         }else if currentView == "sex"{
             UIView.animate(withDuration: 0.8){
                 self.nicknameView.center = CGPoint(x: 209, y: 170)
                 self.sexView.center = CGPoint(x: -415, y: 170)
-                self.nextButton.backgroundColor = UIColor(red: 43/255, green: 43/255, blue: 43/255, alpha: 1)
             }
-            nextButton.isHidden = true
             currentView = "nickname"
+            nextButton.isHidden = true
+            sexSelectionView.isHidden = true
             print("currentView - \(currentView)")
             agreementView.isHidden = false
         }else if currentView == "nickname"{
@@ -272,18 +252,23 @@ class CreateAccountViewController: UIViewController, UITextFieldDelegate{
     
     //MARK: Agreement Button
     @IBAction func spoddifyUseAgreementButton(_ sender: Any) {
+        isValidButton(textField: nicknameTextField)
         agreementButtonIsSelected(arrayIndex: 0, button: spoddifyUseAgreementButton, view: spoddifyUseAgreementBg)
         agreementButtonMoveAnimation(arrayIndex: 0, button: spoddifyUseAgreementButton)
     }
     
     @IBAction func personalInfoCollectionAndUseAgreementButton(_ sender: Any) {
+        
         agreementButtonIsSelected(arrayIndex: 1, button: personalInfoCollectionAndUseAgreementButton, view: personalInfoCollectionAndUseAgreementBg)
         agreementButtonMoveAnimation(arrayIndex: 1, button: personalInfoCollectionAndUseAgreementButton)
+        isValidButton(textField: nicknameTextField)
     }
     
     @IBAction func dataProvideAgreementButton(_ sender: Any) {
+        
         agreementButtonIsSelected(arrayIndex: 2, button: dataProvideAgreementButton, view: dataProvideAgreementBg)
         agreementButtonMoveAnimation(arrayIndex: 2, button: dataProvideAgreementButton)
+        isValidButton(textField: nicknameTextField)
     }
     
     //MARK: isValid
@@ -292,6 +277,27 @@ class CreateAccountViewController: UIViewController, UITextFieldDelegate{
           let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
     
         return emailTest.evaluate(with: testStr)
+    }
+    
+    func isValidButton(textField:UITextField){
+        if textField.text?.isEmpty == false{
+            var agreementCount = 0
+            for i in 0 ... 1{
+                if agreementButtonIsSelected[i] == true{
+                    agreementCount += 1
+                }
+            }
+            print(agreementCount)
+            if agreementCount == 2{
+                madeAccount.backgroundColor = .white
+                madeAccount.isEnabled = true
+            }else{
+                nextButton.backgroundColor = UIColor(red: 77/255, green: 77/255, blue: 77/255, alpha: 1)
+                madeAccount.isEnabled = false
+            }
+        }else{
+            nextButton.backgroundColor = UIColor(red: 77/255, green: 77/255, blue: 77/255, alpha: 1)
+        }
     }
     
     func isValidPassward(testStr: String) -> Bool {
@@ -319,18 +325,71 @@ class CreateAccountViewController: UIViewController, UITextFieldDelegate{
     
     func agreementButtonMoveAnimation(arrayIndex: Int, button: UIButton){
         if agreementButtonIsSelected[arrayIndex] == false{ // 오른쪽으로 이동
-            UIView.animate(withDuration: 0.1){
-                button.center = CGPoint(x: 24+23/2, y: 23/2)
+            UIView.animate(withDuration: 0.4){
+                button.center = CGPoint(x: 24+23/2, y: 3+23/2)
             }
             agreementButtonIsSelected[arrayIndex] = true
             print("현재 \(index)의 값이 \(agreementButtonIsSelected[arrayIndex])로 변환되었습니다.")
         }else{ // 왼쪽으로 이동
             UIView.animate(withDuration: 0.1){
-                button.center = CGPoint(x: 2+23/2, y: 23/2)
+                button.center = CGPoint(x: 2+23/2, y: 3+23/2)
             }
             agreementButtonIsSelected[arrayIndex] = false
             print("현재 \(index)의 값이 \(agreementButtonIsSelected[arrayIndex])로 변환되었습니다.")
         }
         
+    }
+}
+
+extension CreateAccountViewController: UITextFieldDelegate{
+    
+    //MARK: textFieldDidBeginEditing
+    func textFieldDidBeginEditing(_ textField: UITextField){
+        textFieldDidBeginEditing = true
+        isValidButton(textField: textField)
+        print("textFieldDidBeginEditing")
+    }
+    
+    //MARK: textField - shouldChangeCharactersIn
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if range.location > 0{
+            textFieldBackground.backgroundColor = UIColor(red: 113/255, green: 113/255, blue: 113/255, alpha: 1)
+        }else{
+            textFieldBackground.backgroundColor = UIColor(red: 217/255, green: 217/255, blue: 217/255, alpha: 1)
+        }
+        
+        //MARK: shouldChangeCharactersIn - isValid
+        if textField == emailTextField{
+            // email형식과 다르다면
+            if isValidEmail(testStr: emailTextField.text!) != true {
+                emailTextField.textColor = UIColor(red: 189/255, green: 57/255, blue: 60/255, alpha: 1)
+                textFieldBackground.backgroundColor = UIColor(red: 217/255, green: 217/255, blue: 217/255, alpha: 1)
+                emailStateTextView.text = "이 이메일은 유효하지 않습니다. example@email.com과 같은 형식인지 확인하세요"
+                nextButton.backgroundColor = UIColor(red: 77/255, green: 77/255, blue: 77/255, alpha: 1)
+                checkbutton.isHidden = true
+            }else{ // email형식이 맞다면
+                nextButton.backgroundColor = UIColor.white
+                emailStateTextView.text = "나중에 이 이메일 주소를 확인해야 합니다."
+                checkbutton.isHidden = false
+                emailTextField.textColor = .white
+            }
+        //MARK: shouldChangeCharactersIn - isValidPassward
+        }else if textField == passwardTextField{
+            // passwardTextField형식과 다르다면
+            if isValidPassward(testStr: passwardTextField.text!) != true{
+                passwardBackground.backgroundColor = UIColor(red: 217/255, green: 217/255, blue: 217/255, alpha: 1)
+                passwardTextField.textColor = UIColor(red: 189/255, green: 57/255, blue: 60/255, alpha: 1)
+                nextButton.backgroundColor = UIColor(red: 77/255, green: 77/255, blue: 77/255, alpha: 1)
+                passwardTextField.textColor = .white
+                passwardBackground.backgroundColor = UIColor(red: 113/255, green: 113/255, blue: 113/255, alpha: 1)
+            }else{
+                nextButton.backgroundColor = UIColor.white
+            }
+        }else if textField == birthTextField{
+            nextButton.backgroundColor = UIColor(red: 77/255, green: 77/255, blue: 77/255, alpha: 1)
+        }else if textField == nicknameTextField{
+            isValidButton(textField: textField)
+        }
+        return true
     }
 }
